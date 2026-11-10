@@ -17,6 +17,13 @@ from pathlib import Path
 # 关闭 Gradio 遥测：国内网络访问不到统计接口，会在启动时卡顿
 os.environ.setdefault("GRADIO_ANALYTICS_ENABLED", "False")
 
+# Windows 英文环境下控制台编码是 cp1252，直接打印中文会抛 UnicodeEncodeError
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
 import gradio as gr
 
 from episode import Episode
@@ -300,7 +307,7 @@ if __name__ == "__main__":
     # 打包后的冒烟测试入口：只构建界面，不启动服务
     if "--self-check" in sys.argv:
         build_ui()
-        print("OK: 界面构建成功")
+        print("OK: UI built")
         sys.exit(0)
 
     build_ui().launch(
