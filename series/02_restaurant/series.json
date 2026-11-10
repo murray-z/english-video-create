@@ -1,0 +1,15 @@
+{
+  "series_id": "02_restaurant",
+  "name": "国外餐厅情景对话",
+  "description": "年轻女性在国外餐厅的真实对话模拟，横屏 16:9，适合电脑观看",
+  "character": "assets/character.png",
+  "character_style": "young_woman",
+  "supporting_style": "waiter",
+  "image_size": "1920*1080",
+  "tts_speed": 0.75,
+  "voices": {
+    "narrator": "Maia",
+    "you": "Cherry",
+    "waiter": "Aiden"
+  }
+}

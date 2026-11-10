@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+
+build/
+dist/
+
+# 生成的成片和素材，按需保留，不入库
+series/*/episodes/
+output/
+
+# 含 API Key，不要提交
+config.json

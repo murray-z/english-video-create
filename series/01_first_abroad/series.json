@@ -1,0 +1,13 @@
+{
+  "series_id": "01_first_abroad",
+  "name": "第一次出国",
+  "description": "王奶奶第一次跟团出国，12 集实战救命英语",
+  "character": "assets/character.png",
+  "image_size": "1080*1920",
+  "tts_speed": 0.85,
+  "voices": {
+    "narrator": "Maia",
+    "hero": "Jennifer",
+    "staff": "Cherry"
+  }
+}
